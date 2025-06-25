@@ -21,7 +21,7 @@
             </div>
             <br/>
             <h1 style="color: white;">LOCKED</h1>
-            <button type="submit" id="submitBtn">Einloggen</button>
+            <!-- <button type="submit" id="submitBtn">Einloggen</button> -->
             <div id="errorMsg"></div>
         </form>
     </div>
@@ -63,8 +63,15 @@
     inputs.forEach((input, index) => {
         input.addEventListener("input", () => {
         input.value = input.value.toUpperCase();
+
         if (input.value.length === 1 && index < inputs.length - 1) {
             inputs[index + 1].focus();
+        }
+
+        // Check if all fields are filled
+        const entered = Array.from(inputs).map((i) => i.value.toUpperCase()).join("");
+        if (entered.length === inputs.length) {
+            checkPassword(entered);
         }
         });
 
@@ -75,19 +82,37 @@
         });
     });
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const entered = Array.from(inputs).map((input) => input.value.toUpperCase()).join("");
+    function checkPassword(entered) {
+        const correctPassword = "SHER"; // 🔑 Change as needed
         if (entered === correctPassword) {
-        overlay.style.display = "none";
-        mainContent.style.display = "block";
-        document.body.classList.remove("locked");
+            overlay.classList.add("fade-out");
+            setTimeout(() => {
+                overlay.style.display = "none";
+                mainContent.style.display = "block";
+                requestAnimationFrame(() => {
+                mainContent.classList.add("visible");
+                });
+                document.body.classList.remove("locked");
+        }, 600); // Match transition duration
         } else {
-        errorMsg.textContent = "Falsches Passwort. Versuch es nochmal.";
-        inputs.forEach((input) => (input.value = ""));
-        inputs[0].focus();
+            errorMsg.textContent = "Falsches Passwort. Versuch es nochmal.";
+            inputs.forEach((input) => (input.value = ""));
+            inputs[0].focus();
         }
-    });
+    }
+    // form.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     const entered = Array.from(inputs).map((input) => input.value.toUpperCase()).join("");
+    //     if (entered === correctPassword) {
+    //     overlay.style.display = "none";
+    //     mainContent.style.display = "block";
+    //     document.body.classList.remove("locked");
+    //     } else {
+    //     errorMsg.textContent = "Falsches Passwort. Versuch es nochmal.";
+    //     inputs.forEach((input) => (input.value = ""));
+    //     inputs[0].focus();
+    //     }
+    // });
 
     // Autofocus first field on load
     window.onload = () => {
