@@ -48,9 +48,11 @@
 <body class="locked">
   <!-- Password Overlay -->
   <div id="passwordOverlay">
+    <h1 style="color: white;">ACCESS</h1>
     <form id="passwordForm">
       <input type="password" id="passwordInput" placeholder="Passwort eingeben" required />
       <br />
+      <h1 style="color: white;">LOCKED</h1>
       <button type="submit">Einloggen</button>
       <div id="errorMsg"></div>
     </form>
@@ -87,7 +89,7 @@
     const mainContent = document.getElementById("mainContent");
     const errorMsg = document.getElementById("errorMsg");
 
-    const correctPassword = "Feline2025"; // ✅ Change this to whatever you want
+    const correctPassword = "SHER"; // ✅ Change this to whatever you want
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
