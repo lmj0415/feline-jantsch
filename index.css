@@ -68,4 +68,40 @@ h1 {
     background-color: #68B0AB;
 }
 
+    #passwordOverlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('./src/images/dartmoor.png') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    }
 
+    #passwordOverlay input {
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    #passwordOverlay button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+
+    body.locked {
+      overflow: hidden;
+    }
