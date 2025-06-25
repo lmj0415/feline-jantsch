@@ -67,41 +67,57 @@ h1 {
     height: 100vh;
     background-color: #68B0AB;
 }
+#passwordOverlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./src/images/dartmoor.png') no-repeat center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
 
-    #passwordOverlay {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('./src/images/dartmoor.png') no-repeat center center;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5); /* overlay */
+#codeForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.codeInputContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    }
+    flex-direction: row;
+    gap: 10px;
+}
 
-    #passwordOverlay input {
-      padding: 10px;
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
+.codeInput {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
 
-    #passwordOverlay button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+.codeInput:focus {
+  outline: 2px solid #ffffff;
+}
 
-    #errorMsg {
-      color: red;
-      margin-top: 10px;
-    }
+#submitBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    body.locked {
-      overflow: hidden;
-    }
+#errorMsg {
+  margin-top: 15px;
+  color: red;
+}
