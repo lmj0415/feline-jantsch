@@ -10,16 +10,21 @@
 </head>
 <body class="locked">
   <!-- Password Overlay -->
-  <div id="passwordOverlay">
-    <h1 style="color: white;">ACCESS</h1>
-    <form id="passwordForm">
-      <input type="password" id="passwordInput" placeholder="Passwort eingeben" required />
-      <br />
-      <h1 style="color: white;">LOCKED</h1>
-      <button type="submit">Einloggen</button>
-      <div id="errorMsg"></div>
-    </form>
-  </div>
+    <div id="passwordOverlay">
+        <h1 style="color: white;">ACCESS</h1>
+        <form id="codeForm">
+            <div class="codeInputContainer">
+            <input class="codeInput" type="text" maxlength="1" />
+            <input class="codeInput" type="text" maxlength="1" />
+            <input class="codeInput" type="text" maxlength="1" />
+            <input class="codeInput" type="text" maxlength="1" />
+            </div>
+            <br/>
+            <h1 style="color: white;">LOCKED</h1>
+            <button type="submit" id="submitBtn">Einloggen</button>
+            <div id="errorMsg"></div>
+        </form>
+    </div>
 
   <!-- Main Content -->
   <div id="mainContent" style="display: none;">
@@ -46,25 +51,48 @@
   </div>
 
   <script>
-    const form = document.getElementById("passwordForm");
-    const input = document.getElementById("passwordInput");
+    const inputs = document.querySelectorAll(".codeInput");
+    const form = document.getElementById("codeForm");
     const overlay = document.getElementById("passwordOverlay");
     const mainContent = document.getElementById("mainContent");
     const errorMsg = document.getElementById("errorMsg");
 
-    const correctPassword = "SHER"; // ✅ Change this to whatever you want
+    const correctPassword = "SHER"; // 🔑 Set your 4-letter password here
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (input.value === correctPassword) {
+    // Auto-focus next input
+    inputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+        input.value = input.value.toUpperCase();
+        if (input.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+        }
+        });
+
+        input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && input.value === "" && index > 0) {
+            inputs[index - 1].focus();
+        }
+        });
+    });
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const entered = Array.from(inputs).map((input) => input.value.toUpperCase()).join("");
+        if (entered === correctPassword) {
         overlay.style.display = "none";
         mainContent.style.display = "block";
         document.body.classList.remove("locked");
-      } else {
-        errorMsg.textContent = "Falsches Passwort. Bitte versuch es nochmal.";
-        input.value = "";
-      }
+        } else {
+        errorMsg.textContent = "Falsches Passwort. Versuch es nochmal.";
+        inputs.forEach((input) => (input.value = ""));
+        inputs[0].focus();
+        }
     });
-  </script>
+
+    // Autofocus first field on load
+    window.onload = () => {
+        inputs[0].focus();
+    };
+    </script>
 </body>
 </html>
