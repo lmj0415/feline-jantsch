@@ -1,33 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herzlichen Glückwunsch</title>
-    <link rel="icon" href="./src/images/cake.png">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herzlichen Glückwunsch</title>
+  <link rel="icon" href="./src/images/cake.png" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    #passwordOverlay {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    #passwordOverlay input {
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    #passwordOverlay button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+
+    body.locked {
+      overflow: hidden;
+    }
+  </style>
 </head>
-<body>
-    <div>
-        <div class="header_container">
-            <img id="cake_img" src="./src/images/cake_big.png" alt="birthday_cake" />
-            <h1>Herzlichen Glückwunsch zum Geburtstag</h1>
-        </div>
-        <div class="greeting_container">
-            <div class="">
-                <div id="age">17</div>
-                <div id="age_lable">Jahre</div>
-            </div>
-            <div class="greetings">
-                Alles Liebe zu deinem 17. Geburtstag heute. Auch wenn ich schon wieder um die Welt düse, denk ich natürlich an dich und bin für dich da. Es gibt nichts was das ändern würde. <br><br>Alles Liebe, dein Lasse
-            </div>
-        </div>
-        <div class="video_container">
-            <video width="300" height="550" controls>
-                <source src="./src/images/video.mp4" type="video/mp4">
-            </video>
-        </div>
+<body class="locked">
+  <!-- Password Overlay -->
+  <div id="passwordOverlay">
+    <form id="passwordForm">
+      <input type="password" id="passwordInput" placeholder="Passwort eingeben" required />
+      <br />
+      <button type="submit">Einloggen</button>
+      <div id="errorMsg"></div>
+    </form>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" style="display: none;">
+    <div class="header_container">
+      <img id="cake_img" src="./src/images/cake_big.png" alt="birthday_cake" />
+      <h1>Herzlichen Glückwunsch zum Geburtstag</h1>
     </div>
+    <div class="greeting_container">
+      <div>
+        <div id="age">17</div>
+        <div id="age_lable">Jahre</div>
+      </div>
+      <div class="greetings">
+        Alles Liebe zu deinem 17. Geburtstag heute. Auch wenn ich schon wieder um die Welt düse,
+        denk ich natürlich an dich und bin für dich da. Es gibt nichts was das ändern würde.
+        <br /><br />Alles Liebe, dein Lasse
+      </div>
+    </div>
+    <div class="video_container">
+      <video width="300" height="550" controls>
+        <source src="./src/images/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("passwordForm");
+    const input = document.getElementById("passwordInput");
+    const overlay = document.getElementById("passwordOverlay");
+    const mainContent = document.getElementById("mainContent");
+    const errorMsg = document.getElementById("errorMsg");
+
+    const correctPassword = "Feline2025"; // ✅ Change this to whatever you want
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (input.value === correctPassword) {
+        overlay.style.display = "none";
+        mainContent.style.display = "block";
+        document.body.classList.remove("locked");
+      } else {
+        errorMsg.textContent = "Falsches Passwort. Bitte versuch es nochmal.";
+        input.value = "";
+      }
+    });
+  </script>
 </body>
 </html>
