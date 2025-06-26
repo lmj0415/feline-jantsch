@@ -10,8 +10,8 @@ function start(){
     for (link of links) {
       document.getElementById('imgSlider').innerHTML += `
       <img src="${link}" id="slide-${counter}">`
-      document.getElementById('dot2').innerHTML += `
-          <img class="dot" src="${link}" onclick="currentSlide(${counter})" id='sel-${counter}'>`
+      document.getElementById('dotSlider').innerHTML += `
+          <img class="dot" src="${link}" onclick="currentSlide(${counter})" id='dot-${counter}'>`
       counter++;};
     currentSlide(slideIndex);
 }
@@ -32,11 +32,12 @@ if (n > links.length) {slideIndex = 1};
 if (n < 1) {slideIndex = links.length};
 document.location=`#slide-${slideIndex}`;
 document.getElementById('text').innerHTML = texts[slideIndex-1];
-
-let i;
 let dots = document.getElementsByClassName("dot");
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex-1].className += " active";
+
+document.location=`#dot-${slideIndex}`;
+
 }

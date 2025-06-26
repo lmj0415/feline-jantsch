@@ -94,7 +94,7 @@ overflow:hidden;
 
 .dot-wrapper{
 position: relative;
-height:92vh;
+height:8vh;
 }
 
 .dotter{
@@ -104,32 +104,17 @@ scroll-snap-type: x mandatory;
 scroll-behavior:smooth;
 }
 
-.dotter img{
-flex: 1 0 100%;
+.dot{
 scroll-snap-align: start;
 object-fit: cover;
-}
-
-
-.pointerdots {
-text-align:center;
-justify-content:center;
-display:flex;
-position:absolute;
-bottom: 10%;
-width:100%;}
-/* The dots/bullets/indicators */
-
-.dot {
-  cursor: pointer;
-  height: 10vw;
-  width: 10vh;
-  aspect-ratio: 1/1;
-  object-fit:cover;
-  margin: 0 2px;
-  display: inline-block;
-  z-index:1;
-  border: none;
+cursor: pointer;
+height: 10vw;
+width: 10vh;
+aspect-ratio: 1/1;
+object-fit:cover;
+margin: 0 2px;
+z-index:1;
+border: none;
 }
 
 .active, .dot:hover {
