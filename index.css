@@ -14,25 +14,35 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #FEE1C7;
+    background-color: #bff6fb;
+}
+
+#QuiBono_img{
+width:80%;
+padding:10%;}
+
+#wir_img{
+width:80%;
+border-radius:2%;
+margin-bottom: 20%;
 }
 
 h1 {
     font-weight: bold;
-}
-
-#cake_img {
-    width: 100px;
+    padding:10%;
 }
 
 .greeting_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: End;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color:#93748a;
+    background-image: url('src/images/(Br)Omens.jpg');
+    background-size: cover;
+    background-position: center;
+
 }
 
 #age{
@@ -139,3 +149,5 @@ h1 {
 #mainContent.visible {
   opacity: 1;
 }
+
+
