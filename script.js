@@ -24,6 +24,7 @@ function plusSlides(n) {
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
+
 }
 
 function showSlides(n){
@@ -38,4 +39,6 @@ let dots = document.getElementsByClassName("dot");
   dots[slideIndex-1].className += " active";
   window.location=`#dot-${slideIndex}`;
   window.location=`#dot-${slideIndex-2}`;
+  document.getElementById('background').style = `background-image: url(${links[slideIndex-1]});`
 }
+
