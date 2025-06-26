@@ -48,7 +48,7 @@
         <br /><br />Alles Liebe, dein Lasse<br/><br/>
       </div>
     </div>
-      <div class="image_slider">
+      <div class="background">
           <div class="content">
               <div class="sliderhead">
                   <img src="src/images/img-1.jpg">
@@ -61,20 +61,20 @@
                   <img src="src/images/img-2.jpg">
                   <img src="src/images/img-3.jpg">
               </div>
-              <div class="slider">
-                  <img src="src/images/img-1.jpg">
-                  <img src="src/images/img-2.jpg">
-                  <img src="src/images/img-3.jpg">
-                  <img src="src/images/img-1.jpg">
-                  <img src="src/images/img-2.jpg">
-                  <img src="src/images/img-3.jpg">
-                  <img src="src/images/img-1.jpg">
-                  <img src="src/images/img-2.jpg">
-                  <img src="src/images/img-3.jpg">
-              </div>
+              <sec class="container">
+                <div class="slider-wrapper">
+                    <div class="slider" id="imgSlider"></div>
+                    <div class="text" id="text"></div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class = "pointerdots" id="dot2"></div>
+                </div>
+              </sec>
           </div>
       </div>
   </div>
+
+  <script> start() </script>
 
   <script>
     const inputs = document.querySelectorAll(".codeInput");
