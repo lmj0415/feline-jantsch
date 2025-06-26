@@ -13,13 +13,12 @@ function start(){
       document.getElementById('dotSlider').innerHTML += `
           <img class="dot" src="${link}" onclick="currentSlide(${counter})" id='dot-${counter}'>`
       counter++;};
-    currentSlide(slideIndex);
+    currentSlide(Math.ceil(links.length/2));
 }
 
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
-  console.log(slideIndex);
 }
 
 // Thumbnail image controls
@@ -37,7 +36,6 @@ let dots = document.getElementsByClassName("dot");
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex-1].className += " active";
-
-document.location=`#dot-${slideIndex}`;
-
+  window.location=`#dot-${slideIndex}`;
+  window.location=`#dot-${slideIndex-2}`;
 }

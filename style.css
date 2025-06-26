@@ -12,21 +12,6 @@ background-color: rgba(40,40,40,0.6);
 background-blend-mode: lighten;
 }
 
-.sliderhead {
-display:flex;
-flex-direction: row;
-align-items: space-around;
-overflow: hidden;
-
-}
-
-.sliderhead img{
-height: 8vh;
-padding: 1vh;
-aspect-ratio: 1/1;
-object-fit:cover;
-}
-
 .container{
 box-sizing: border-box;
 overflow:hidden;
@@ -34,7 +19,7 @@ overflow:hidden;
 
 .slider-wrapper{
 position: relative;
-height:92vh;
+height:88vh;
 }
 
 .slider{
@@ -81,6 +66,12 @@ object-fit: cover;
   border-radius: 3px 0 0 3px;
 }
 
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
@@ -94,12 +85,12 @@ overflow:hidden;
 
 .dot-wrapper{
 position: relative;
-height:8vh;
+height:15 vh;
 }
 
 .dotter{
 display: flex;
-overflow-x: hidden;
+overflow-y: hidden;
 scroll-snap-type: x mandatory;
 scroll-behavior:smooth;
 }
@@ -108,8 +99,7 @@ scroll-behavior:smooth;
 scroll-snap-align: start;
 object-fit: cover;
 cursor: pointer;
-height: 10vw;
-width: 10vh;
+height: 10vh;
 aspect-ratio: 1/1;
 object-fit:cover;
 margin: 0 2px;
