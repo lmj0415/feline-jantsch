@@ -38,6 +38,8 @@ width: 80vw;
 
 #wir_img{
 width: 80vw;
+aspect-ratio: 16/10;
+object-fit:cover;
 border-radius:2%;
 box-shadow:
   1px 1px 5px black,
