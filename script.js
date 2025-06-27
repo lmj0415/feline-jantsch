@@ -13,21 +13,45 @@ data = [
         "position": "start"
     },
     {
-        "link": "./src/images/img-1.jpg",
-        "heading": "London",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat quam, imperdiet vitae metus sit amet, ornare congue nulla. Ut faucibus velit venenatis ornare efficitur. Nam hendrerit laoreet euismod.",
+        "link": "./src/images/Dungeon.jpg",
+        "heading": "Londoner Dungeon",
+        "text": "...Oder an den Flammen des brennenden Londons erwärmen...",
+        "position": "end"
+    },
+    {
+        "link": "./src/images/Tusseaud.jpg",
+        "heading": "Madame Tussauds",
+        "text": "...Die celebreties mal in voller Größe bestaunen...",
         "position": "center"
     },
     {
-        "link": "./src/images/img-2.jpg",
-        "heading": "London",
-        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "link": "./src/images/escape.png",
+        "heading": "Official Sherlock Esacpe",
+        "text": "...oder alternativ unsere Köpfe zum rauchen bringen.",
+        "position": "end"
+    },
+    {
+        "link": "./src/images/Trafalgar.jpg",
+        "heading": "Trafalgar Square",
+        "text": "Auf den Spuren deiner Helden...",
         "position": "start"
     },
     {
-        "link": "./src/images/img-3.jpg",
-        "heading": "London",
-        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "link": "./src/images/StJames.jpg",
+        "heading": "St James Park",
+        "text": "...erkunden wir London,...",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/Borough.jpg",
+        "heading": "Borough Market",
+        "text": "...natürlich auch kulinarisch,...",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/StPauls.jpg",
+        "heading": "St. Pauls cathedral",
+        "text": "...oder lassen uns den Abend über den Dächern Londons gut gehen.",
         "position": "end"
     }
 ]
