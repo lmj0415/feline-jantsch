@@ -13,6 +13,47 @@ data = [
         "position": "start"
     },
     {
+        "link": "./src/images/Dungeon.jpg",
+        "heading": "Londoner Dungeon",
+        "text": "...Oder an den Flammen des brennenden Londons erwärmen...",
+        "position": "end"
+    },
+    {
+        "link": "./src/images/Tusseaud.jpg",
+        "heading": "Madame Tussauds",
+        "text": "...Die celebreties mal in voller Größe bestaunen...",
+        "position": "center"
+    },
+    {
+        "link": "./src/images/escape.png",
+        "heading": "Official Sherlock Esacpe",
+        "text": "...oder alternativ unsere Köpfe zum rauchen bringen.",
+        "position": "end"
+    },
+    {
+        "link": "./src/images/Trafalgar.jpg",
+        "heading": "Trafalgar Square",
+        "text": "Auf den Spuren deiner Helden...",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/StJames.jpg",
+        "heading": "St James Park",
+        "text": "...erkunden wir London,...",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/Borough.jpg",
+        "heading": "Borough Market",
+        "text": "...natürlich auch kulinarisch,...",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/StPauls.jpg",
+        "heading": "St. Pauls cathedral",
+        "text": "...oder lassen uns den Abend über den Dächern Londons gut gehen.",
+        "position": "end"
+    }
         "link": "./src/images/bakerstreet.jpg",
         "heading": "Die Bakerstreet",
         "text": "Dem Geheimniss auf der Spur!\nWelches Rätzel wird dieses Mal zu lösen sein? Wir können auf Sherlock zählen.",
