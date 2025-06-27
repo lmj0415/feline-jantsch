@@ -27,7 +27,7 @@ data = [
     {
         "link": "./src/images/bakerstreet.jpg",
         "heading": "Die Bakerstreet",
-        "text": "...Oder warum nich gleich bei ihnen zuhause vorbei schauen.",
+        "text": "...Oder warum nich gleich bei ihnen zuhause vorbei schauen...",
         "position": "start"
     },
     {
@@ -51,7 +51,7 @@ data = [
     {
         "link": "./src/images/soho.jpg",
         "heading": "Soho",
-        "text": "...bis in die letzten Buchladen.",
+        "text": "...bis in die letzten Buchladen...",
         "position": "start"
     },
     {
@@ -63,13 +63,13 @@ data = [
     {
         "link": "./src/images/StPauls.jpg",
         "heading": "St. Pauls cathedral",
-        "text": "...oder lassen uns den Abend über den Dächern Londons gut gehen.",
+        "text": "...oder lassen uns den Abend über den Dächern Londons gut gehen...",
         "position": "end"
     },
     {
         "link": "./src/images/dartmoor.png",
         "heading": "Dartmoor",
-        "text": "Und wenn wir genug von der Großstadt haben.",
+        "text": "...Und wenn wir genug von der Großstadt haben...",
         "position": "end"
     },
     {
