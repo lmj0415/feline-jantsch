@@ -1,0 +1,26 @@
+[
+    {
+        "link": "./src/images/dartmoor.png",
+        "heading": "Dartmoor",
+        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "position": "center"
+    },
+    {
+        "link": "/src/images/img-1.jpg",
+        "heading": "London",
+        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "position": "center"
+    },
+    {
+        "link": "./src/images/img-2.jpg",
+        "heading": "London",
+        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "position": "center"
+    },
+    {
+        "link": "./src/images/img-3.jpg",
+        "heading": "London",
+        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "position": "center"
+    }
+]
