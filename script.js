@@ -115,9 +115,10 @@ function handleTouchMove(evt) {
 };
 
 function handleTouchEnd(evt) {
-  if ( ! xDiff ) {
+  console.log(xDiff, yDiff) 
+  if ( ! xDiff || Math.abs(yDiff) > Math.abs(xDiff) || Math.abs(xDiff) < 30) {
       return;
-  }                                                                                                      
+  }                                                                                                     
   if ( xDiff > 0 ) {
       plusSlides(1)
   } else {
@@ -126,5 +127,7 @@ function handleTouchEnd(evt) {
   
   xDown = null;                                                        
   yDown = null;
+  xDiff = null
+  yDiff = null
 };
      
