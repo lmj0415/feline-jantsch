@@ -43,7 +43,7 @@ data = [
         "position": "end"
     },
     {
-        "link": "./src/images/StJames.jpg",
+        "link": "./src/images/stJames.jpg",
         "heading": "St James Park",
         "text": "...erkunden wir London,...",
         "position": "start"
