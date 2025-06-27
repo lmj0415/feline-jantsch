@@ -53,7 +53,8 @@ data = [
         "heading": "St. Pauls cathedral",
         "text": "...oder lassen uns den Abend über den Dächern Londons gut gehen.",
         "position": "end"
-    }
+    },
+    {
         "link": "./src/images/bakerstreet.jpg",
         "heading": "Die Bakerstreet",
         "text": "Dem Geheimniss auf der Spur!\nWelches Rätzel wird dieses Mal zu lösen sein? Wir können auf Sherlock zählen.",
