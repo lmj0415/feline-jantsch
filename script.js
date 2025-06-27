@@ -7,29 +7,23 @@ const links = ["./src/images/dartmoor.png","./src/images/img-1.jpg","./src/image
 // valid positions -> start, center, end
 data = [
     {
-        "link": "./src/images/dartmoor.png",
-        "heading": "Dartmoor",
-        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "link": "./src/images/london_1.jpg",
+        "heading": "London",
+        "text": "Die Heimat berühmter Dedektive, Engel und Dämonen. Wo sonst sollte unsere Reise starten",
         "position": "start"
     },
     {
-        "link": "./src/images/img-1.jpg",
-        "heading": "London",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam erat quam, imperdiet vitae metus sit amet, ornare congue nulla. Ut faucibus velit venenatis ornare efficitur. Nam hendrerit laoreet euismod.",
-        "position": "center"
-    },
-    {
-        "link": "./src/images/img-2.jpg",
-        "heading": "London",
-        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
+        "link": "./src/images/bakerstreet.jpg",
+        "heading": "Die Bakerstreet",
+        "text": "Dem Geheimniss auf der Spur!\nWelches Rätzel wird dieses Mal zu lösen sein? Wir können auf Sherlock zählen.",
         "position": "start"
     },
     {
-        "link": "./src/images/img-3.jpg",
-        "heading": "London",
-        "text": "Zusammen können wir den Hund von Baskaville erlegen.",
-        "position": "end"
-    }
+        "link": "./src/images/soho.jpg",
+        "heading": "Soho",
+        "text": "Zwischen Musik, Magie und Mitternachtsmurmeln. Hier könnten Aziraphale und Crowley ihren Lieblingsplatz haben – versteckt zwischen einem Buchladen und der nächsten Apokalypse.",
+        "position": "start"
+    },
 ]
 
 function start(){
