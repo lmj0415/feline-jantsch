@@ -13,10 +13,10 @@ data = [
         "position": "start"
     },
     {
-        "link": "./src/images/Dungeon.jpg",
-        "heading": "Londoner Dungeon",
-        "text": "...Oder an den Flammen des brennenden Londons erwärmen...",
-        "position": "end"
+        "link": "./src/images/Trafalgar.jpg",
+        "heading": "Trafalgar Square",
+        "text": "Auf den Spuren deiner Helden...",
+        "position": "start"
     },
     {
         "link": "./src/images/Tusseaud.jpg",
@@ -25,21 +25,33 @@ data = [
         "position": "center"
     },
     {
+        "link": "./src/images/bakerstreet.jpg",
+        "heading": "Die Bakerstreet",
+        "text": "...Oder warum nich gleich bei ihnen zuhause vorbei schauen.",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/Dungeon.jpg",
+        "heading": "Londoner Dungeon",
+        "text": "...Oder an den Flammen des brennenden Londons erwärmen...",
+        "position": "end"
+    },
+    {
         "link": "./src/images/escape.png",
         "heading": "Official Sherlock Esacpe",
         "text": "...oder alternativ unsere Köpfe zum rauchen bringen.",
         "position": "end"
     },
     {
-        "link": "./src/images/Trafalgar.jpg",
-        "heading": "Trafalgar Square",
-        "text": "Auf den Spuren deiner Helden...",
-        "position": "start"
-    },
-    {
         "link": "./src/images/StJames.jpg",
         "heading": "St James Park",
         "text": "...erkunden wir London,...",
+        "position": "start"
+    },
+    {
+        "link": "./src/images/soho.jpg",
+        "heading": "Soho",
+        "text": "...bis in die letzten Buchladen.",
         "position": "start"
     },
     {
@@ -55,16 +67,16 @@ data = [
         "position": "end"
     },
     {
-        "link": "./src/images/bakerstreet.jpg",
-        "heading": "Die Bakerstreet",
-        "text": "Dem Geheimniss auf der Spur!\nWelches Rätzel wird dieses Mal zu lösen sein? Wir können auf Sherlock zählen.",
-        "position": "start"
+        "link": "./src/images/dartmoor.png",
+        "heading": "Dartmoor",
+        "text": "Und wenn wir genug von der Großstadt haben.",
+        "position": "end"
     },
     {
-        "link": "./src/images/soho.jpg",
-        "heading": "Soho",
-        "text": "Zwischen Musik, Magie und Mitternachtsmurmeln. Hier könnten Aziraphale und Crowley ihren Lieblingsplatz haben – versteckt zwischen einem Buchladen und der nächsten Apokalypse.",
-        "position": "start"
+        "link": "./src/images/dartmoor_sherlock.png",
+        "heading": "Dartmoor",
+        "text": "...dann warten Abenteure fern von dem Gewimmel.",
+        "position": "end"
     },
 ]
 
