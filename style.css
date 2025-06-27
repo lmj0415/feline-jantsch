@@ -1,11 +1,12 @@
-.content{
+.slider{
 width: 100%;
 height: 100vh;
-backdrop-filter: blur(8px);
-overflow:hidden;}
-
-
+overflow: hidden;
+/* backdrop-filter: blur(8px); #COMMENT_LASSE */
+/* overflow:hidden; */
+}
 .background{
+position: absolute;
 width: 100%;
 height: 100vh;
 background-size: auto 100vh;
@@ -14,31 +15,40 @@ background-blend-mode: lighten;
 background-position:center;
 }
 
-.container{
-box-sizing: border-box;
-overflow:hidden;
-}
-
-.slider-wrapper{
-position: relative;
-height:88vh;
-}
-
-.slider{
+.nav-container{
+position: absolute;
+width: 100%;
+height: 80vh;
 display: flex;
-overflow-x: hidden;
-scroll-snap-type: x mandatory;
-scroll-behavior:smooth;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+pointer-events: none;
 }
 
-.slider img{
-position: relative;
-margin-top: 40%;
-flex: 1 0 100%;
-width: 80%;
-aspect-ratio: 12/9;
-scroll-snap-align: start;
-object-fit: cover;
+/* Next & previous buttons */
+.nav-button {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  pointer-events: all;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  pointer-events: none;
 }
 
 .text {
@@ -53,42 +63,10 @@ object-fit: cover;
   max-width: 700px;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 42.5%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* Position the "next button" to the right */
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
 .dot_container{
-box-sizing: border-box;
-overflow-y:hidden;
+  position: relative;
+  width: 100%;
+  height: 20vh;
 }
 
 .dot-wrapper{
@@ -96,7 +74,11 @@ position: relative;
 height:12 vh;
 }
 
-.dotter{
+.dot-wrapper {
+  position: relative;
+}
+
+.dot-slider{
 display: flex;
 overflow-y: hidden;
 scroll-snap-type: x mandatory;
